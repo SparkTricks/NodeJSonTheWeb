@@ -1,0 +1,91 @@
+:root{
+    --sidebar-width: 100px;
+    --sidebar-bg: black;
+    --sidebar-text: white;
+}
+#not-sidebar{
+    margin-left: var(--sidebar-width);
+}
+#logger{
+    position: absolute;
+    text-overflow: "..."
+}
+#sidebar{
+    /* overflow: ; */
+    /* overflow-wrap: anywhere; */
+    position: fixed;
+    height: 100%;
+    width: var(--sidebar-width);
+    z-index: 1;
+    background-color: var(--sidebar-bg);
+}
+#sidebar *{
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+}
+textarea{
+    width: 100%;
+    resize: vertical;
+}
+button{
+    width: 100%;
+}
+#examples{
+    display: flex; 
+}
+@media(prefers-color-scheme: dark){
+    *{
+        background-color: #181a1b;
+        color: white;
+    }
+    #logger iframe{
+        background-color: white;
+        color: white;
+    }
+}
+button:hover{
+    cursor: pointer;
+}
+#file{
+    --dividing : 5;
+    width: calc(140px / var(--dividing));
+    height: calc(140px / var(--dividing))
+}
+#fileDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+#fileDiv{
+    z-index: 1;
+}
+#fileLabel{
+    text-overflow: "...";
+}
+#fileButton{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 100px;
+    padding-top: 25px;
+    position: relative;
+    /* white-space: pre; */
+    left: -100px;
+}
+#saveFile{
+    left: 50px;
+}
+#addFile{
+    left: 45px;
+}
+#fileButtons *{
+    width: min-content;
+    position: relative;
+    
+    border: none;
+}
+.bruhjs:after{
+    content:"Class Changed!";
+    background-color: "red";
+}
