@@ -5,8 +5,7 @@ class fs{
     async readFileSync(){
 
     }
-    readFile(fil
-        eName){
+    readFile(fileName){
         if(filesText[files.indexOf(fileName)] != undefined){
             return filesText[files.indexOf(fileName)];
         }else{
